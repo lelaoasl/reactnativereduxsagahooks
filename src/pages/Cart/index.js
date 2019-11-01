@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect, useSelector, useDispatch } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { useSelector, useDispatch } from 'react-redux';
+
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import * as CartActions from '../../store/modules/cart/actions';
 
@@ -30,7 +30,7 @@ import {
   EmptyText,
 } from './styles';
 
-function Cart({ navigation }) {
+function Cart() {
   const products = useSelector(state =>
     state.cart.map(product => ({
       ...product,
